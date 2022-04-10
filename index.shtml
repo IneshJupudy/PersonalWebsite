@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inesh Jupudy says Hi</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div>
+        <div title="Navigation Bar">
+            <!--#include virtual="links.html" -->
+        </div>
+        <div class="main" title="Main Div">
+            <div class="side-left" title="Left Main Div">
+                <img src="Inesh.png" alt="Inesh Image">
+            </div>
+            <div class="side-right" title="Right Main Div">
+                <h1>Inesh Jupudy</h1>
+                <div title="About Me Div">
+                    <p title="About Inesh Jupudy">
+                        I am Inesh Jupudy currently a senior at UB majoring in Computer Science. I have taken quite a number of software courses here at UB from advanced blockchain concepts to data structures and algorithms. I am a tech enthusiast and like to explore and master anything new in the tech world. I aspire to be a software engineer at tech giants like Google, Microsoft gaining valuable insights and guidance in my early career.
+    
+                        I have previously worked on cool projects and had the opportunity to work in some amazing internships. I keep in touch with a number of industry professionals and find their insights valuable. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

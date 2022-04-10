@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
+p{
+    font-size:24px;
+    font-weight: 500;
+}
+
+.header, .footer{
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    border: 1px solid black;
+    place-content: center;
+    place-items: center;
+}
+
+.footer{
+    margin-top: 20px;
+}
+
+.header img{
+    width:200px;
+}
+
+.main{
+    margin-top: 20px;
+    display:grid;
+    grid-template-rows: 33% 33% 34%;
+    width:100%;
+    border: 1px solid black;
+    text-align: center;
+    padding:12px 0;
+}
+
+.column{
+    display:grid;
+    grid-template-columns: 33% 34% 33%;
+    padding:24px 0;
+}
+
+.column-box{
+    border:1px solid black;
+    margin: 0 10px;
+    padding:5px 0;
+}
+
+h1,h3{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: normal;
+}
+
+a{
+    font-size: 21px;
+}

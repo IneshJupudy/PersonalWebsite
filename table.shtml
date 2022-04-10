@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inesh Jupudy says Hi</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <div>
+        <div title="Navigation Bar">
+            <!--#include virtual="links.html" -->
+        </div>
+        <div class="main" title="Main Div">
+            <table>
+                <tr>
+                  <th>Font Family</th>
+                  <th>Font Size</th>
+                  <th>Colors</th>
+                </tr>
+                <tr class="row1">
+                  <td>Bebas Neue</td>
+                  <td>18px</td>
+                  <td>#00000</td>
+                </tr>
+                <tr class="row2">
+                  <td>Fredoka</td>
+                  <td>22px</td>
+                  <td>#FF0000</td>
+                </tr>
+                <tr class="row3">
+                  <td>League Gothic</td>
+                  <td>26px</td>
+                  <td>#DA7635</td>
+                </tr>
+                <tr class="row4">
+                  <td>Poppins</td>
+                  <td>30px</td>
+                  <td>#654236</td>
+                </tr>
+                <tr class="row5">
+                  <td>Roboto Mono</td>
+                  <td>34px</td>
+                  <td>#DB995A</td>
+                </tr>
+              </table>
+        </div>
+    </div>
+    
+</body>
+</html>
