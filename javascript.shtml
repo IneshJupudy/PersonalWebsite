@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inesh Jupudy Says Hi</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="tables.css">
+</head>
+<body>
+    <div>
+        <div title="Navigation Bar">
+            <!--#include virtual="links.html" -->
+        </div>
+        <div title="Main Div">
+            <script>
+                const currentDate = new Date()
+                document.write('<h3 title="Current Date">'+ currentDate.toDateString() +'</h3>')
+            </script>
+            <script>
+                const currentTime = new Date()
+                document.write('<h3 title="Current Time">'+ currentTime.toLocaleTimeString() +'</h3>')
+            </script>
+            <script>
+                const timeLeft = new Date()
+                if(timeLeft.getDate() > 24){
+                    document.write('<h3 title="Time Left for Assignment"> Number of days used for late submission:'+ (timeLeft.getDate() - 24).toString() +'</h3>')
+                }
+                else if(timeLeft.getDate() === 24){
+                    document.write('<h3 title="Time Left for Assignment"> Submission is due tonight at 11:59PM</h3>')
+                }
+                else{
+                    document.write('<h3 title="Time Left for Assignment"> Number of days left for submission:'+ (24-timeLeft.getDate()).toString() +'</h3>')
+                }
+            </script>
+            <script>
+                const monthArray = {'January' : '31','Febraury': '28','March': '31','April': '30','May': '31','June': '30','July': '31','August': '31','September': '30','October': '31','November': '30','December': '31'}
+                let table = "<table><thead><th>Month Number</th><th>Month</th><th>Month Days</th>"
+                let counter = 1
+                for(let months in monthArray){
+                    if( counter % 2 == 0){
+                        table += "<tr><td>" + counter.toString()+"</td><td>"+ months+"</td><td>" + monthArray[months] + "</td></tr>"
+                    }
+                    else{
+                        table += "<tr style='background:green'><td>" + counter.toString()+"</td><td>"+ months+"</td><td>" + monthArray[months] + "</td></tr>"
+                    }
+                    counter += 1
+                }
+                table += " </table>"
+
+                document.write(table)
+            </script>
+        </div>
+    </div>    
+</body>
+</html>
