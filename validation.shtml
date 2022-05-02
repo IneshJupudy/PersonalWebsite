@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inesh Jupudy says Hi</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="forms.css">
+    <script>
+        function validate(event){
+            let fName = document.forms["Form"]["UserFirstName"].value;
+            let lName = document.forms["Form"]["UserLastName"].value;
+            let pNumber = document.forms["Form"]["UserPhoneNumber"].value;
+            let eID = document.forms["Form"]["UserEmailID"].value;
+            let zCode = document.forms["Form"]["UserZipCode"].value;
+
+            if(fName == "" || lName == ""){
+                alert("First/Last Name can't be empty")
+                document.forms["Form"]["UserFirstName"].style.backgroundColor = "#F00";
+                document.forms["Form"]["UserLasttName"].style.backgroundColor = "#F00";
+                event.preventDefault();
+                event.preventDefault();
+            }
+
+            let pNumberBool = false
+            for(let i in pNumber){
+                if(isNaN(i) == true){
+                    pNumberBool = true
+                }
+            }
+
+            if(pNumberBool == true || pNumber.length != 10){
+                alert("Phone Number can only be digits and be of 10 digits")
+                document.forms["Form"]["UserPhoneNumber"].style.backgroundColor = "#F00";
+                event.preventDefault();
+            }
+            
+            let zCodeBool = false
+            for(let i in zCode){
+                if(isNaN(i) == true){
+                    zCodeBool = true
+                }
+            }
+
+            if(zCodeBool == true || zCode.length != 5){
+                alert("Zip Code can only be digits and be of 5 digits")
+                document.forms["Form"]["UserZipCode"].style.backgroundColor = "#F00";
+                event.preventDefault();
+            }
+
+            if(/^\S+@\S+\.\S+$/.test(eID) == false){
+                alert("Email ID is incorrect")
+                document.forms["Form"]["UserEmailID"].style.backgroundColor = "#F00";
+                event.preventDefault();
+            }
+
+            return false;
+        } 
+    </script>
+</head>
+<body>
+    <div>
+        <div title="Navigation Bar">
+            <!--#include virtual="links.html" -->
+        </div>
+        <script>
+            const currentDate = new Date()
+            document.write('<h3 title="Current Date">'+ currentDate.toDateString() +'</h3>')
+        </script>
+        <script>
+            const currentTime = new Date()
+            document.write('<h3 title="Current Time">'+ currentTime.toLocaleTimeString() +'</h3>')
+        </script>
+        <div class="main" title="Main Div">
+            
+            <form method="post" novalidate action="mailto:ineshjup@buffalo.edu?subject=Form_Submission" id="form" name="Form" onsubmit="validate(event)">
+                <div title="Form" class="form-divider">
+                    <fieldset>
+                        <legend> Personal Details  </legend>
+                        <label> * First Name: </label>
+                        <input id="firstname" name="UserFirstName" type="text" placeholder="First Name">
+                        <label> * Last Name: </label>
+                        <input id="lastname" name="UserLastName" type="text" placeholder="Last Name">
+                        <label> * Phone Number: </label>
+                        <input id="phonenumber" name="UserPhoneNumber" type="text" placeholder="Phone Number" pattern="[0-9]{10}" title="10 digit phone number">
+                        <label> * Email ID: </label>
+                        <input id="emailid" name="UserEmailID" type="email" placeholder="Email ID">
+                    </fieldset>
+                    <fieldset>
+                        <legend> Address </legend>
+                        <label> * Zip/Postal Code: </label>
+                        <input id="zip" name="UserZipCode" type="text" placeholder="Zip Code" pattern="[0-9]{5}" title="5 digit phone number">
+                    </fieldset>
+                </div>
+                <input type="submit" value="OK Send My Data" name="SubmitButton" id="button">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
